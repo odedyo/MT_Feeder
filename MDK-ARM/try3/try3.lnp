@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"try3\startup_stm32f103xb.o"
+"try3\main.o"
+"try3\stm32f1xx_it.o"
+"try3\stm32f1xx_hal_msp.o"
+"try3\i2c-lcd.o"
+"try3\stm32f1xx_hal_gpio_ex.o"
+"try3\stm32f1xx_hal_i2c.o"
+"try3\stm32f1xx_hal.o"
+"try3\stm32f1xx_hal_rcc.o"
+"try3\stm32f1xx_hal_rcc_ex.o"
+"try3\stm32f1xx_hal_gpio.o"
+"try3\stm32f1xx_hal_dma.o"
+"try3\stm32f1xx_hal_cortex.o"
+"try3\stm32f1xx_hal_pwr.o"
+"try3\stm32f1xx_hal_flash.o"
+"try3\stm32f1xx_hal_flash_ex.o"
+"try3\stm32f1xx_hal_exti.o"
+"try3\stm32f1xx_hal_rtc.o"
+"try3\stm32f1xx_hal_rtc_ex.o"
+"try3\stm32f1xx_hal_tim.o"
+"try3\stm32f1xx_hal_tim_ex.o"
+"try3\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "try3\try3.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "try3.map" -o try3\try3.axf
