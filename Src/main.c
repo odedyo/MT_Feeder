@@ -1007,7 +1007,8 @@ void IDLE_STATE (void)
 		// ---- alarm ---- //
 		// Hours
 		// -------------- //
-		TAhours = TempsAlarm.AlarmTime.Hours;
+		//TAhours = TempsAlarm.AlarmTime.Hours;
+		TAhours = HOURS_ALARM;
 		itoa(TAhours, tempAHours);
 		if(TAhours<10){
 			lcd_send_cmd(0x80|0x5F);
@@ -1023,7 +1024,8 @@ void IDLE_STATE (void)
 		lcd_send_string(":");
 		// Minute
 		// -------------- //
-		TAmin = TempsAlarm.AlarmTime.Minutes;
+		//TAmin = TempsAlarm.AlarmTime.Minutes;
+		TAmin = MIN_ALARM;
 		itoa(TAmin, tempAMin);
 		if(TAmin<10){
 			lcd_send_cmd(0x80|0x62);
@@ -1039,7 +1041,8 @@ void IDLE_STATE (void)
 		lcd_send_string(":");
 		// Second
 		// -------------- //
-		TAsec = TempsAlarm.AlarmTime.Seconds;
+		//TAsec = TempsAlarm.AlarmTime.Seconds;
+		TAsec = SEC_ALARM;
 		itoa(TAsec, tempASec);
 		if(TAsec<10){
 			lcd_send_cmd(0x80|0x65);
